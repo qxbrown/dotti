@@ -1,0 +1,131 @@
+{
+     "layer": "top",
+     "exclusive": true,
+     "passthrough": false,
+     "gtk-layer-shell": true,
+     "height": 40,
+     "margin-top": 10,
+     "margin-left": 10,
+     "margin-right": 10,
+
+     "hyprland/workspaces": {
+          "format": "{icon}",
+          "on-click": "activate",
+          "format-icons": {
+               "active": "󰮯",
+               "default": "󰊠"
+          }
+     },
+     "hyprland/language": {
+          "format": " {}",
+          "format-en": "en",
+          "format-es": "es"
+     },
+     "custom/cava": {
+          "format": "{}",
+          "exec": "~/.config/waybar/scripts/waybar-cava.sh",
+          "return-type": "text"
+     },
+     "tray": {
+          "icon-size": 18,
+          "spacing": 0
+     },
+
+     "mpris": {
+          "tooltip-format": "",
+          "interval": 1,
+          "format": "<span>{status_icon} {title}</span>",
+          "format-paused": "<span>{status_icon} {title}</span>",
+          "on-click": "playerctl play-pause",
+          "on-scroll-up": "playerctl next",
+          "on-scroll-down": "playerctl previous",
+          "status-icons": {
+               "playing": "󰎈",
+               "paused": "󰏥"
+          },
+          "max-length": 20
+     },
+
+     "clock": {
+          "format": "<span></span> {:%I:%M %p}",
+          "format-alt": "<span></span> {:%a %b %d}"
+     },
+     "backlight": {
+          "device": "DP-1",
+          "format": "{icon} {percent}%",
+          "format-icons": ["", "", "", "", "", "", "", "", ""]
+     },
+     "battery": {
+          "bat": "BAT0",
+          "adapter": "ADP0",
+          "interval": 60,
+          "states": {
+               "warning": 30,
+               "critical": 20
+          },
+          "format": "{icon} {capacity}%",
+          "format-warning": "{icon} {capacity}%",
+          "format-critical": "{icon} {capacity}%",
+          "format-charging": " {capacity}%",
+          "format-plugged": "  {capacity}%",
+          "format-alt": "{icon} {time}",
+          "format-full": "  {capacity}%",
+          "format-icons": [" ", " ", " ", " ", " "]
+     },
+
+     "pulseaudio": {
+          "format": "{icon} {volume}%",
+          "format-muted": "󰖁",
+          "on-click": "pamixer -t",
+          "on-scroll-up": "pamixer -i 5",
+          "on-scroll-down": "pamixer -d 5",
+          "scroll-step": 5,
+          "format-icons": {
+               "headphone": "",
+               "hands-free": "",
+               "headset": "",
+               "phone": "",
+               "portable": "",
+               "car": "",
+               "default": ["", "", ""]
+          }
+     },
+     "pulseaudio#microphone": {
+          "format": "{format_source}",
+          "format-source": " ",
+          "format-source-muted": " ",
+          "on-click": "pamixer --default-source -t",
+          "on-scroll-up": "pamixer --default-source -i 5",
+          "on-scroll-down": "pamixer --default-source -d 5",
+          "scroll-step": 5
+     },
+     "temperature": {
+          "format": " {temperatureC}°C",
+          "format-alt": " {temperatureF}°F"
+     },
+
+     "network": {
+          "interval": 1,
+          "format-wifi": "  {essid}",
+          "format-alt": "󰯎 {bandwidthTotalBytes}",
+          "format-disconnected": "Disconnected  "
+     },
+     "bluetooth": {
+          "format": " on",
+          "format-disabled": "󰂲 off",
+          "format-connected": " {num_connections}"
+     },
+
+     "cpu": {
+          "interval": 10,
+          "format": "󰍛 {usage}%"
+     },
+
+     "memory": {
+          "interval": 30,
+          "format": "󰘚 {}%"
+     },
+     "custom/arch": {
+          "format": ""
+     }
+}

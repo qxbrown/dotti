@@ -1,0 +1,170 @@
+* {
+     font-family: JetBrainsMono Nerd Font;
+     font-size: 15px;
+     letter-spacing: 1px;
+     padding: 2px;
+}
+
+window#waybar {
+     background-color: rgba(255, 255, 255, 0.03);
+     color: #cdd6f4;
+     border-radius: 10px;
+}
+
+window#waybar.hidden {
+     opacity: 0.2;
+}
+
+#window {
+     color: #bac2de;
+}
+
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#tray,
+#clock,
+#window,
+#workspaces,
+#custom-arch,
+#mpris,
+#bluetooth {
+     padding: 0 10px;
+     background-color: rgba(255, 255, 255, 0.04);
+}
+
+#custom-arch {
+     color: #ff80ee;
+     border-radius: 10px 0px 0px 10px;
+}
+
+#cpu {
+     color: #ff9954;
+}
+
+#memory {
+     color: #ebcb8b;
+}
+
+#window {
+     color: #cad3f5;
+     border-radius: 10px;
+     margin-left: 8px;
+     margin-right: 80px;
+}
+
+#clock {
+     color: #fffebc;
+     border-radius: 10px;
+}
+
+#tray {
+     border-radius: 10px;
+     margin-right: 8px;
+}
+
+#tray > .passive {
+     -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+     -gtk-icon-effect: highlight;
+     background-color: #eb4d4b;
+}
+
+#network {
+     color: #cba6f7;
+     border-radius: 10px;
+     margin-right: 8px;
+}
+
+#temperature {
+     color: #9dbcce;
+     margin-right: 8px;
+     border-radius: 0px 10px 10px 0px;
+}
+
+#mpris {
+     color: #83c2b3;
+     border-radius: 10px;
+}
+
+#battery {
+     color: #c9c9c9;
+     border-radius: 10px;
+     border-radius: 10px 0px 0px 10px;
+}
+
+#battery.charging,
+#battery.full,
+#battery.plugged {
+     color: #5bff9f;
+}
+
+@keyframes blink {
+     to {
+          background-color: rgba(30, 34, 42, 0.5);
+          color: #abb2bf;
+     }
+}
+
+#battery.critical:not(.charging) {
+     color: #f53c3c;
+     animation-name: blink;
+     animation-duration: 0.5s;
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+     animation-direction: alternate;
+}
+
+#backlight {
+     color: #74a3c2;
+}
+
+#pulseaudio {
+     color: #cbd884;
+     border-left: 0px;
+     border-right: 0px;
+}
+
+#pulseaudio.microphone {
+     color: #dfd0b1;
+     border-radius: 0px 10px 10px 0px;
+}
+
+#workspaces {
+     margin-left: 10px;
+     border-radius: 10px;
+     padding: 0 10px;
+     color: #cdd6f4;
+     background-color: rgba(237, 173, 199, 0.07);
+}
+
+#workspaces button {
+     color: #7984a4;
+     border: none;
+     padding: 0 5px;
+     box-shadow: inset 0 -3px transparent;
+     transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
+}
+
+#workspaces button.active {
+     color: #ffa768;
+     background: transparent;
+     border: none;
+     transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
+}
+
+#workspaces button.focused {
+     color: #cdd6f4;
+}
+
+#workspaces button.urgent {
+     color: #00ffd5;
+     background: transparent;
+}
