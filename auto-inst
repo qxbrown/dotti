@@ -43,7 +43,7 @@ cp -R .bashrc ~/
 chmod +x ~/.config/hypr/scripts/batterynotify.sh
 chmod +x ~/.config/hypr/scripts/lookup.sh
 chmod +x ~/.config/hypr/scripts/tmuxsession 
-chmot +x ~/.config/hypr/scripts/tmuxcht.sh
+chmod +x ~/.config/hypr/scripts/tmuxcht.sh
 
 echo -e "Script completed.\n"
 echo -e "You can start Hyprland by typing Hyprland.\n"
